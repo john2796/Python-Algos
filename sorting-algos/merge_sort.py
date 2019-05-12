@@ -22,7 +22,7 @@ def merge(arrA, arrB):
     return merged_arr
 
 
-# recursive sorting function
+# recursive sorting function ---> O (log n)
 def merge_sort(arr):
     print(arr, '<------------------------split')
     if len(arr) > 1:
