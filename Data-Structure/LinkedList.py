@@ -56,6 +56,24 @@ class LinkedList:
     def len(self):
         return self.size
 
+    def remove_last(self):
+        if not self.head and not self.tail:
+            return None
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            cur = self.head
+            prev = None
+            while cur != self.tail:
+                prev = cur
+                cur = cur.next
+
+            prev.next = None
+            self.tail = prev
+            self.size -= 1
+            return cur.value
+
     def contains(self, target):
         if not self.head and not self.tail:
             return None
@@ -74,7 +92,6 @@ print(test.enqueue(1))
 print(test.enqueue(2))
 print(test.enqueue(3))
 print(test.enqueue(4))
-print(test.enqueue(5))
-print(test.contains(6), 'contains -->')
+print(test.remove_last(), 'remove -- last')
 print(test.display())
 print(test.len())
