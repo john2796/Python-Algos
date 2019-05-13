@@ -1,6 +1,7 @@
 def bsr(arr, target, low, high):
+    print(arr)
     mid = (low + high) // 2
-    if high > low:
+    if low > high:
         return -1
     if target == arr[mid]:
         return True
@@ -8,13 +9,10 @@ def bsr(arr, target, low, high):
         return bsr(arr, target, low, mid - 1)
     else:
         return bsr(arr, target, mid + 1, high)
-    # elif target < arr[mid]:
-    #     high = mid - 1
-    # else:
-    #     low = mid + 1
 
 
-print(bsr([1, 2, 3, 4, 5, 6, 21, 22], 35, 0, 8))
+test = [1, 2, 3, 12, 5, 6, 21, 22]
+print(bsr(test, 12, 0, len(test) - 1))
 
 
 #  1 Solve the base case by thinking of the simplest examples you can solve
