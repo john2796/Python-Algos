@@ -31,6 +31,18 @@ class LinkedList:
 
         pass
 
+    def add_to_first(self, item):
+        new_node = Node(item)
+        if not self.head and not self.tail:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            cur = self.head
+            self.head = new_node
+            self.head.next = cur
+        self.size += 1
+        return
+
     def enqueue(self, item):
         new_node = Node(item)
         if not self.head and not self.tail:
@@ -74,6 +86,26 @@ class LinkedList:
             self.size -= 1
             return cur.value
 
+    # def add_n(self, n):
+    #     if not self.head and not self.tail:
+    #         return None
+    #     if self.head == self.tail:
+    #         return self.enqueue(n)
+    #     if n == self.head.value:
+    #         return self.add_to_first(n)
+    #     elif n == self.tail.value:
+    #         return self.enqueue(n)
+    #     else:
+    #         new_node = Node(n)
+    #         cur = self.head
+    #         prev = None
+    #         while cur.value != n:
+    #             prev = cur
+    #             cur = cur.next
+
+    #     self.size += 1
+    #     return
+
     def remove_n(self, n):
         if not self.head and not self.tail:
             return None
@@ -112,6 +144,8 @@ print(test.enqueue(1))
 print(test.enqueue(2))
 print(test.enqueue(3))
 print(test.enqueue(4))
-print(test.remove_n(2), 'remove -- n')
+print(test.enqueue(5))
+
+
 print(test.display())
 print(test.len())
