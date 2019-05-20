@@ -6,7 +6,7 @@
   - [x] binary_search
   - [x] linear_search
   - [x] merge_sort
-  - [] quick_sort
+  - [x] quick_sort
   - [] bubble_sort
   - [] insertion_sort
   - [] merge_sort_in_place
@@ -20,4 +20,4 @@
 
 
 ## Algorithms
-- []  ...
+- []  ... 
