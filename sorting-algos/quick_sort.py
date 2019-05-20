@@ -7,19 +7,14 @@ arr = [17, 41, 5, 22, 54, 6, 29, 3, 13]
 
 
 def quick_sort(arr):
-    pivot = arr[0]
-    c1 = 1
-    c2 = 2
-    print(arr, 'prev', c1, c2)
-    if c2 < pivot:
-        swapp(arr, c1, c2)
-        c1 += 1
-        c2 += 1
-    else:
-        c1 += 1
-        c2 += 1
-    print(arr, c1, c2)
     pass
+
+
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = (low - 1)
+    for j in range(0, len(high) - 1):
+        print(j)
 
 
 def swapp(arr, l, r):
@@ -30,5 +25,4 @@ def swapp(arr, l, r):
 
 
 print(quick_sort(arr))
-
-#findPivot(arr, 0, len(arr) - 1)
+print(partition(arr, 0, len(arr)))
