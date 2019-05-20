@@ -11,17 +11,18 @@ def bubble_sort(arr):
             print(size, i, j, arr)
             # compare j < i  ?
             if arr[j] < arr[i]:
-                    # if yes increment i++ and swap i and j
+               # if yes and swap i and j
                 temp = arr[i]
                 arr[i] = arr[j]
                 arr[j] = temp
+          # increment pointers
             i += 1
             j += 1
         print('hit ------------------')
-        i = 0
-        size -= 1
         # once length of arr is completed
         # subtract 1 to the last item because it should be the correct pos and reset i = 0
+        i = 0
+        size -= 1
 
         print(size, i, j, arr)
     return arr
