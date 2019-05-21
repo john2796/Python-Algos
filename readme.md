@@ -8,7 +8,7 @@
   - [x] merge_sort
   - [x] quick_sort
   - [x] bubble_sort
-  - [] insertion_sort
+  - [x] insertion_sort
   - [] merge_sort_in_place
   - [] selection_sort
   - [] time_sort
