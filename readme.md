@@ -9,10 +9,10 @@
   - [x] quick_sort
   - [x] bubble_sort
   - [x] insertion_sort
-  - [] merge_sort_in_place
-  - [] selection_sort
-  - [] time_sort
+  - [x] selection_sort
   - [] count_sort
+  - [] time_sort
+  - [] merge_sort_in_place
   
 ## Data-Structure
 - [x] single_linked_list
