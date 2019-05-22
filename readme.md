@@ -17,7 +17,15 @@
 ## Data-Structure
 - [x] single_linked_list
 - [] double_linked_list
+- [] binary_search_tree
+- [] heap
+- [] queue
+- [] stack
 
+# Graph
+- [] breath_first_search
+- [] depth_first_search
+- [] maze_sprint
 
 ## Algorithms
 - []  ... 
