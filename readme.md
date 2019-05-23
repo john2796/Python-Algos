@@ -16,8 +16,8 @@
   
 ## Data-Structure
 - [x] single_linked_list
+- [x] binary_search_tree --> mix of recursive and iterative 
 - [] double_linked_list
-- [] binary_search_tree
 - [] heap
 - [] queue
 - [] stack
