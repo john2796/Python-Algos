@@ -52,11 +52,11 @@ class DoublyLinkedList:
             self.tail.prev = current
         self.size += 1
         return self.head
-
 # 3 cases for removing
 # 1 if there's no Node
 # 2 if there's only one node
-# 3 if there's more than 2 Node
+# 3 if there's more this Node
+
     def remove_from_head(self):
         if not self.head and not self.tail:
             return None
@@ -83,25 +83,50 @@ class DoublyLinkedList:
         self.size -= 1
         return self.head
 
+    def move_to_end(self, item):
+        if not self.head and not self.tail:
+            self.add_to_head(item)
+        if self.tail == self.head:
+            self.add_to_tail(item)
+        else:
+            current = self.head
+            while current.value != item:
+                current = current.next
+                self.delete(current.value)
+                self.add_to_tail(item)
+            return current.value
 
-# * `move_to_front` takes a reference to a node in the list and moves it to the front of the list, shifting all other list nodes down.
-# ------------------------------------------------
-# 3 cases for removing
-# 1 if there's no Node
-# 2 if there's only one node
-# 3 if there's more than 2 Node
+    def move_to_front(self, item):
+        if not self.head and not self.tail:
+            self.add_to_head(item)
+        if self.tail == self.head:
+            self.add_to_head(item)
+        else:
+            current = self.head
+            while current.value != item:
+                current = current.next
+                self.delete(current.value)
+                self.add_to_head(item)
+            return
 
-    def remove_to_front(self, item):
-        pass
-
-    def remove_to_end(self):
-        pass
-
-    def delete(self):
-        pass
-
-    def get_max(self):
-        pass
+    def delete(self, target):
+        if not self.head and not self.tail:
+            return None
+        if self.tail == self.head:
+            self.head = None
+            self.tail = None
+        if self.head.value == target:
+            self.remove_from_head()
+        elif self.tail.value == target:
+            self.remove_from_tail()
+        else:
+            current = self.head
+            while current:
+                current = current.next
+                if current.value == target:
+                    print(current.value, current.next.prev.value,
+                          current.prev.next.value)
+                    return current.value
 
 
 test = DoublyLinkedList()
@@ -109,8 +134,7 @@ test.add_to_head(3)
 test.add_to_head(2)
 test.add_to_head(1)
 test.add_to_tail(4)
-test.remove_from_head()
-test.remove_from_tail()
-
-
+# print(test.move_to_front(2), '<- move-to-end')
+#print(test.move_to_end(3), '<- move-to-end')
+print(test.delete(3), '<- delete')
 print(test.display())
