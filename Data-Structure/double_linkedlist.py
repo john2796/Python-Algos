@@ -90,11 +90,12 @@ class DoublyLinkedList:
             self.add_to_tail(item)
         else:
             current = self.head
-            while current.value != item:
-                current = current.next
-                self.delete(current.value)
-                self.add_to_tail(item)
-            return current.value
+            while current:
+                if current.value == item:
+                    self.delete(current.value)
+                    self.add_to_tail(item)
+                    return
+            current = current.next
 
     def move_to_front(self, item):
         if not self.head and not self.tail:
@@ -105,7 +106,7 @@ class DoublyLinkedList:
             current = self.head
             while current.value != item:
                 current = current.next
-                self.delete(current.value)
+                self.delete(item)
                 self.add_to_head(item)
             return
 
@@ -124,9 +125,12 @@ class DoublyLinkedList:
             while current:
                 current = current.next
                 if current.value == target:
-                    print(current.value, current.next.prev.value,
-                          current.prev.next.value)
-                    return current.value
+                    nxt = current.next
+                    prev = current.prev
+                    current = None
+                    nxt.prev = prev
+                    prev.next = nxt
+                    return
 
 
 test = DoublyLinkedList()
@@ -135,6 +139,5 @@ test.add_to_head(2)
 test.add_to_head(1)
 test.add_to_tail(4)
 # print(test.move_to_front(2), '<- move-to-end')
-#print(test.move_to_end(3), '<- move-to-end')
-print(test.delete(3), '<- delete')
+print(test.move_to_end(1), '<- move-to-end')
 print(test.display())
