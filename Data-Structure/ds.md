@@ -51,7 +51,7 @@ Stretch Goals:
 ![Image of Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/300px-Binary_search_tree.svg.png)
 
 ### Heaps
-* Should have the methods `insert`, `delete`, `get_max`, `_bubble_up`, and `_sift_down`.
+
   * `insert` adds the input value into the heap; this method should ensure that the inserted value is in the correct spot in the heap
   * `delete` removes and returns the 'topmost' value from the heap; this method needs to ensure that the heap property is maintained after the topmost element has been removed. 
   * `get_max` returns the maximum value in the heap _in constant time_.
