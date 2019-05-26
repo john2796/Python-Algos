@@ -32,3 +32,4 @@
 
 ## Repl challenge
 - [x] python basic intro
+- [] string function
