@@ -29,3 +29,6 @@
 
 ## Algorithms
 - []  ... 
+
+## Repl challenge
+- [x] python basic intro

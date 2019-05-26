@@ -190,7 +190,6 @@ print("Stuff list comprehension returns: ", stuff)
 
 ''' The above list comprehension combines the elements of two lists into a new list if
 elements at matching indexes do not match '''
-
 # Comprehensions are not only limited to lists; they work with dicts as well!
 # The following comprehension builds a dict where value is indexed by its square root:
 squares_dict = {x: x**2 for x in range(10)}
@@ -223,5 +222,5 @@ print("Result of filtering out non-even fib numbers: ", result)
 But first, we need to import `reduce` from the `functools` module: '''
 from functools import reduce
 ints = [47, 11, 42, 102, 13]
-#result =
+result =  reduce(lambda x , y:x+1, ints)
 print("Result of reducing a list to find the max: ", result)
