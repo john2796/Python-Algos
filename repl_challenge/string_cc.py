@@ -75,13 +75,13 @@ print(fix_start('fckkkg awesome Yee'), 'fix_start <--')
 # Assume a and b are length 2 or more.
 
 
-def mix_up(a, b):
+def mix_up(a, b, str):
     # Your code here
-    # takes two letter and swap them
-    temp = a[0]
-    a[0] = b[0]
-    b[0] = temp
-    return a + b
+    # loop through str
+    for idx in range(0, len(str)):
+        print(str[idx], '<--', idx)
+    # find a and b then swap
+    return str
 
 
-print(mix_up(" mix ", "pod"))
+print(mix_up("m", "p", "mix pod"))
