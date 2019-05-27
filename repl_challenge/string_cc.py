@@ -48,7 +48,6 @@ print(both_ends('spring'))
 def fix_start(s):
     # Your code here
     # have all the occurence "*" example 'babble' -> 'ba**le'
-
     q = [char for char in s]
     visited = {}
     res = ""
