@@ -4,7 +4,6 @@
 # passed in. However, if the count is 10 or more, then use the word 'many'
 # instead of the actual count.
 # So donuts(5) returns 'Number of donuts: 5'
-
 # and donuts(23) returns 'Number of donuts: many'
 
 
@@ -23,7 +22,6 @@ print(donuts(5))
 # 2. both_ends
 # Given a string s, return a string made of the first 2
 # and the last 2 chars of the original string,
-# so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 
 
@@ -33,7 +31,6 @@ def both_ends(s):
 
 
 print(both_ends('spring'))
-
 # 3. fix_start
 # Given a string s, return a string
 # where all occurences of its first char have

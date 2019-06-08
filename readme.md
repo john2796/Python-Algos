@@ -19,7 +19,7 @@
 - [x] binary_search_tree --> mix of recursive and iterative 
 - [] double_linked_list
 - [] heap
-- [] queue
+- [x] queue
 - [] stack
 
 # Graph
