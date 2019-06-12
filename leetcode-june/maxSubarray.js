@@ -10,18 +10,25 @@ output: 6
 
 Explanation: [4,-1,2,1] has the largest sum = 6.
 
+
+---- the naive method 
+ is to run two loops. The outer loop picks the beginning element, the innter loop finds the maximum possible sum with first
+ element picked bu outer loop and compares this maximum with the overall maximum. Finally return the overall maximum.
+ The time complexity of the Naive method is (n^2).
+
 */
 
 const maxSubArray = nums => {
-  let max_current = nums[0];
-  let max_global = nums[0];
-  for (let i = 0; i < nums.length; i++) {
-    max_current = Math.max(nums[i] + max_current + nums[i]);
-    if (max_current > max_current) {
-      max_global = max_current;
-    }
+  let maxSoFar = nums[0];
+  let maxEndingHere = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
+    maxSoFar = (maxSoFar, maxEndingHere);
   }
-  return max_global;
+  return maxSoFar;
 };
 
-console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+console.log(maxSubArray([1, 2]));
+
+//Kadane's Algorithm
