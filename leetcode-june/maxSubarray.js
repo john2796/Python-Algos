@@ -23,12 +23,17 @@ const maxSubArray = nums => {
   let maxEndingHere = nums[0];
 
   for (let i = 1; i < nums.length; i++) {
+    console.log(maxEndingHere, "+", a[i], "=", maxEndingHere + a[i]);
+    //   1 '+' -2 '=' -1
+    //  -1 '+'  2 '=' .1
+    //   2 '+' -3 '=' -1
+    //  -1 '+'  2 '='. 1
+    //   2 '+'  3 '='. 5
     maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
     maxSoFar = (maxSoFar, maxEndingHere);
   }
   return maxSoFar;
 };
 
-console.log(maxSubArray([1, 2]));
-
+maxSubArray([1, -2, 2, -3, 2, 3]);
 //Kadane's Algorithm
