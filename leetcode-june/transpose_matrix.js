@@ -49,7 +49,6 @@ const transpose2 = A => {
     for (let j = 0; j < res[i].length; j++) {
       // add all first indices of arr
       // console.log(res, A[j][i]);
-
       res[i][j] = A[j][i];
     }
   }
