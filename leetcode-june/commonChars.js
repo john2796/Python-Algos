@@ -23,17 +23,25 @@ A[i][j] is a lowercase letter
 */
 
 var commonChars = function(A) {
+  // get first item in array and split each char
   let originalChars = A[0].split("")
+  // loop through array starting from second index
   for (let i = 1; i < A.length; i++) {
+    // split rest of item in A array
     let tempChars = A[i].split("")
-
+    // reasigned originalChars to filtered items
     originalChars = originalChars.filter(item => {
+      // get index of each tempChars
+      // The indexOf() method returns the first index at which a given element can be found in the array
       let index = tempChars.indexOf(item)
-      return index > -1 ? tempChars[index] : false
+      // -1 if it is not present.
+      // console.log("tempChars[index]", tempChars[index])
+      // if index greater than -1 that means it's present set tempChars[index] to true else false
+      return index > -1 ? (tempChars[index] = true) : false
     })
   }
 
-  console.log(originalChars)
+  // console.log(originalChars)
   return originalChars
 }
 
