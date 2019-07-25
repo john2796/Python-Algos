@@ -39,6 +39,10 @@
 - [x] python basic intro
 - [] string function
 
-
 ## Leet Code
-- [] Valid Palindrome II
+
+- [x] Valid Palindrome
+- [x] smallestRangeI
+- [x] fizzbuzz leetcode 
+- [x] Find Common Characters (easy) 
+ 
